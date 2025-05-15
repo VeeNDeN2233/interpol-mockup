@@ -34,8 +34,8 @@ def service_isod():
 def create_notice():
     return render_template('create_notice.html')
 
-@app.route('/legal')
-def legal():
+@app.route('/legal-base')
+def legal_base():
     return render_template('legal_base.html')
 
 @app.route('/person-details')

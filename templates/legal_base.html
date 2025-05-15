@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    
     <meta charset="UTF-8">
     <title>Правовая база</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
     <header class="header">
         <div class="header-top">
-            <img src="img/emblem.png" alt="Герб МВД" class="emblem">
+            <img src="{{ url_for('static', filename='img/emblem.png') }}" alt="Герб МВД" class="emblem">
             <div class="header-title">
                 <h1>Национальное центральное бюро Интерпола МВД России</h1>
                 <div class="user-info">Сотрудник: Иванов А.А. | Отдел международного сотрудничества</div>
@@ -17,9 +16,9 @@
         </div>
 
         <nav class="main-nav">
-            <a href="index.html" class="nav-btn">Поиск</a>
-            <a href="add-notice.html" class="nav-btn">Создать уведомление</a>
-            <a href="legal.html" class="nav-btn active">Правовая база</a>
+            <a href="{{ url_for('search') }}" class="nav-btn">Поиск</a>
+            <a href="{{ url_for('create_notice') }}" class="nav-btn">Создать уведомление</a>
+            <a href="{{ url_for('legal_base') }}" class="nav-btn active">Правовая база</a>
         </nav>
     </header>
 
@@ -42,6 +41,6 @@
         </div>
     </main>
 
-    <script src="js/app.js"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
 </body>
 </html>
