@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Создание уведомления</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-top">
+            <img src="img/emblem.jpg" alt="Герб МВД" class="emblem">
+            <div class="header-title">
+                <h1>Национальное центральное бюро Интерпола МВД России</h1>
+                <div class="user-info">Сотрудник: Иванов А.А. | Отдел международного сотрудничества</div>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <a href="index.html" class="nav-btn">Поиск</a>
+            <a href="add-notice.html" class="nav-btn active">Создать уведомление</a>
+            <a href="legal.html" class="nav-btn">Правовая база</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="form-container">
+            <h2>Создание уведомления с новыми данными</h2>
+
+            <form class="unified-form" id="noticeForm">
+                <div class="form-section">
+                    <h3>Персональные данные</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>ФИО полностью</label>
+                            <input type="text" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Дата рождения</label>
+                            <input type="date" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Данные преступления</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Тип уведомления</label>
+                            <select class="notice-type">
+                                <option value="red">Красное (розыск)</option>
+                                <option value="blue">Синее (информация)</option>
+                                <option value="green">Зеленое (предупреждение)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Страна-заявитель</label>
+                            <select required>
+                                <option>Россия</option>
+                                <option>Франция</option>
+                                <option>Германия</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Биометрические данные</h3>
+                    <div class="bio-section">
+                        <div class="form-group">
+                            <label>Загрузить фото</label>
+                            <input type="file" accept="image/*">
+                        </div>
+                        <div class="form-group">
+                            <label>Отпечатки пальцев</label>
+                            <input type="file" accept=".fpt">
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn submit-btn">Создать уведомление</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>НЦБ Интерпол МВД России</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header class="header">
+        <div class="header-top">
+            <img src="{{ url_for('static', filename='img/emblem.jpg') }}" alt="Герб МВД" class="emblem">
+            <div class="header-title">
+                <h1>Национальное центральное бюро Интерпола МВД России</h1>
+                <div class="user-info">Сотрудник: Иванов А.А. | Отдел международного сотрудничества</div>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <a href="{{ url_for('index') }}" class="nav-btn active">Поиск</a>
+            <a href="{{ url_for('add_notice') }}" class="nav-btn">Создать уведомление</a>
+            <a href="{{ url_for('legal') }}" class="nav-btn">Правовая база</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="search-container">
+            <form class="search-form" id="searchForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Фамилия</label>
+                        <input type="text" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Имя</label>
+                        <input type="text" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Отчество</label>
+                        <input type="text" class="form-input">
+                    </div>
+                </div>
+
+                <div class="form-row">
+    <div class="form-group">
+        <label>Дата рождения</label>
+        <input type="date" class="form-input">
+    </div>
+    <div class="form-group">
+        <label>Пол</label>
+        <select class="form-input">
+            <option>Не указано</option>
+            <option>Мужской</option>
+            <option>Женский</option>
+        </select>
+    </div>
+    <div class="form-group">
+    <label>Гражданство</label>
+    <select class="form-input">
+        <option value="">Выберите гражданство</option>
+        <option>Австралия</option>
+        <option>Австрия</option>
+        <option>Азербайджан</option>
+        <option>Албания</option>
+        <option>Алжир</option>
+        <option>Ангола</option>
+        <option>Андорра</option>
+        <option>Аргентина</option>
+        <option>Армения</option>
+        <option>Афганистан</option>
+        <option>Багамы</option>
+        <option>Бангладеш</option>
+        <option>Барбадос</option>
+        <option>Бахрейн</option>
+        <option>Беларусь</option>
+        <option>Бельгия</option>
+        <option>Бенин</option>
+        <option>Болгария</option>
+        <option>Боливия</option>
+        <option>Босния и Герцеговина</option>
+        <option>Ботсвана</option>
+        <option>Бразилия</option>
+        <option>Бруней</option>
+        <option>Буркина-Фасо</option>
+        <option>Бурунди</option>
+        <option>Вануату</option>
+        <option>Великобритания</option>
+        <option>Венгрия</option>
+        <option>Венесуэла</option>
+        <option>Вьетнам</option>
+        <option>Габон</option>
+        <option>Гаити</option>
+        <option>Гамбия</option>
+        <option>Гана</option>
+        <option>Гватемала</option>
+        <option>Гвинея</option>
+        <option>Германия</option>
+        <option>Гондурас</option>
+        <option>Гренада</option>
+        <option>Греция</option>
+        <option>Грузия</option>
+        <option>Дания</option>
+        <option>Джибути</option>
+        <option>Доминиканская Республика</option>
+        <option>Египет</option>
+        <option>Замбия</option>
+        <option>Зимбабве</option>
+        <option>Израиль</option>
+        <option>Индия</option>
+        <option>Индонезия</option>
+        <option>Иордания</option>
+        <option>Ирак</option>
+        <option>Иран</option>
+        <option>Ирландия</option>
+        <option>Исландия</option>
+        <option>Испания</option>
+        <option>Италия</option>
+        <option>Йемен</option>
+        <option>Кабо-Верде</option>
+        <option>Казахстан</option>
+        <option>Камбоджа</option>
+        <option>Камерун</option>
+        <option>Канада</option>
+        <option>Катар</option>
+        <option>Кения</option>
+        <option>Кипр</option>
+        <option>Киргизия</option>
+        <option>Китай</option>
+        <option>Колумбия</option>
+        <option>Коморы</option>
+        <option>Конго</option>
+        <option>КНДР</option>
+        <option>Республика Корея</option>
+        <option>Коста-Рика</option>
+        <option>Кот-д'Ивуар</option>
+        <option>Куба</option>
+        <option>Кувейт</option>
+        <option>Лаос</option>
+        <option>Латвия</option>
+        <option>Лесото</option>
+        <option>Либерия</option>
+        <option>Ливан</option>
+        <option>Ливия</option>
+        <option>Литва</option>
+        <option>Лихтенштейн</option>
+        <option>Люксембург</option>
+        <option>Маврикий</option>
+        <option>Мавритания</option>
+        <option>Мадагаскар</option>
+        <option>Малави</option>
+        <option>Малайзия</option>
+        <option>Мали</option>
+        <option>Мальта</option>
+        <option>Марокко</option>
+        <option>Мексика</option>
+        <option>Мозамбик</option>
+        <option>Молдова</option>
+        <option>Монако</option>
+        <option>Монголия</option>
+        <option>Мьянма</option>
+        <option>Намибия</option>
+        <option>Непал</option>
+        <option>Нигер</option>
+        <option>Нигерия</option>
+        <option>Нидерланды</option>
+        <option>Никарагуа</option>
+        <option>Новая Зеландия</option>
+        <option>Норвегия</option>
+        <option>ОАЭ</option>
+        <option>Оман</option>
+        <option>Пакистан</option>
+        <option>Панама</option>
+        <option>Папуа — Новая Гвинея</option>
+        <option>Парагвай</option>
+        <option>Перу</option>
+        <option>Польша</option>
+        <option>Португалия</option>
+        <option>Россия</option>
+        <option>Руанда</option>
+        <option>Румыния</option>
+        <option>Сальвадор</option>
+        <option>Сан-Марино</option>
+        <option>Саудовская Аравия</option>
+        <option>Северная Македония</option>
+        <option>Сейшелы</option>
+        <option>Сенегал</option>
+        <option>Сент-Винсент и Гренадины</option>
+        <option>Сербия</option>
+        <option>Сингапур</option>
+        <option>Сирия</option>
+        <option>Словакия</option>
+        <option>Словения</option>
+        <option>США</option>
+        <option>Сомали</option>
+        <option>Судан</option>
+        <option>Суринам</option>
+        <option>Сьерра-Леоне</option>
+        <option>Таджикистан</option>
+        <option>Таиланд</option>
+        <option>Танзания</option>
+        <option>Того</option>
+        <option>Тринидад и Тобаго</option>
+        <option>Тунис</option>
+        <option>Туркменистан</option>
+        <option>Турция</option>
+        <option>Уганда</option>
+        <option>Узбекистан</option>
+        <option>Украина</option>
+        <option>Уругвай</option>
+        <option>Фиджи</option>
+        <option>Филиппины</option>
+        <option>Финляндия</option>
+        <option>Франция</option>
+        <option>Хорватия</option>
+        <option>ЦАР</option>
+        <option>Чад</option>
+        <option>Черногория</option>
+        <option>Чехия</option>
+        <option>Чили</option>
+        <option>Швейцария</option>
+        <option>Швеция</option>
+        <option>Шри-Ланка</option>
+        <option>Эквадор</option>
+        <option>Экваториальная Гвинея</option>
+        <option>Эритрея</option>
+        <option>Эстония</option>
+        <option>Эфиопия</option>
+        <option>ЮАР</option>
+        <option>Ямайка</option>
+        <option>Япония</option>
+    </select>
+</div>
+</div>
+
+<div class="form-row">
+    <div class="form-group">
+        <label>Вид преступления</label>
+        <select class="form-input">
+            <option>Все виды</option>
+            <option>Терроризм</option>
+            <option>Финансовые преступления</option>
+            <option>Коррупция</option>
+            <option>Организованная преступность</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Страна преступления</label>
+        <select class="form-input">
+            <option>Все страны</option>
+            <option>Россия</option>
+            <option>Австралия</option>
+            <option>Австрия</option>
+            <option>Азербайджан</option>
+            <option>Албания</option>
+            <option>Алжир</option>
+            <option>Ангола</option>
+            <option>Андорра</option>
+            <option>Аргентина</option>
+            <option>Армения</option>
+            <option>Афганистан</option>
+            <option>Багамы</option>
+            <option>Бангладеш</option>
+            <option>Барбадос</option>
+            <option>Бахрейн</option>
+            <option>Беларусь</option>
+            <option>Бельгия</option>
+            <option>Бенин</option>
+            <option>Болгария</option>
+            <option>Боливия</option>
+            <option>Босния и Герцеговина</option>
+            <option>Ботсвана</option>
+            <option>Бразилия</option>
+            <option>Бруней</option>
+            <option>Буркина-Фасо</option>
+            <option>Бурунди</option>
+            <option>Вануату</option>
+            <option>Великобритания</option>
+            <option>Венгрия</option>
+            <option>Венесуэла</option>
+            <option>Вьетнам</option>
+            <option>Габон</option>
+            <option>Гаити</option>
+            <option>Гамбия</option>
+            <option>Гана</option>
+            <option>Гватемала</option>
+            <option>Гвинея</option>
+            <option>Германия</option>
+            <option>Гондурас</option>
+            <option>Гренада</option>
+            <option>Греция</option>
+            <option>Грузия</option>
+            <option>Дания</option>
+            <option>Джибути</option>
+            <option>Доминиканская Республика</option>
+            <option>Египет</option>
+            <option>Замбия</option>
+            <option>Зимбабве</option>
+            <option>Израиль</option>
+            <option>Индия</option>
+            <option>Индонезия</option>
+            <option>Иордания</option>
+            <option>Ирак</option>
+            <option>Иран</option>
+            <option>Ирландия</option>
+            <option>Исландия</option>
+            <option>Испания</option>
+            <option>Италия</option>
+            <option>Йемен</option>
+            <option>Кабо-Верде</option>
+            <option>Казахстан</option>
+            <option>Камбоджа</option>
+            <option>Камерун</option>
+            <option>Канада</option>
+            <option>Катар</option>
+            <option>Кения</option>
+            <option>Кипр</option>
+            <option>Киргизия</option>
+            <option>Китай</option>
+            <option>Колумбия</option>
+            <option>Коморы</option>
+            <option>Конго</option>
+            <option>КНДР</option>
+            <option>Республика Корея</option>
+            <option>Коста-Рика</option>
+            <option>Кот-д'Ивуар</option>
+            <option>Куба</option>
+            <option>Кувейт</option>
+            <option>Лаос</option>
+            <option>Латвия</option>
+            <option>Лесото</option>
+            <option>Либерия</option>
+            <option>Ливан</option>
+            <option>Ливия</option>
+            <option>Литва</option>
+            <option>Лихтенштейн</option>
+            <option>Люксембург</option>
+            <option>Маврикий</option>
+            <option>Мавритания</option>
+            <option>Мадагаскар</option>
+            <option>Малави</option>
+            <option>Малайзия</option>
+            <option>Мали</option>
+            <option>Мальта</option>
+            <option>Марокко</option>
+            <option>Мексика</option>
+            <option>Мозамбик</option>
+            <option>Молдова</option>
+            <option>Монако</option>
+            <option>Монголия</option>
+            <option>Мьянма</option>
+            <option>Намибия</option>
+            <option>Непал</option>
+            <option>Нигер</option>
+            <option>Нигерия</option>
+            <option>Нидерланды</option>
+            <option>Никарагуа</option>
+            <option>Новая Зеландия</option>
+            <option>Норвегия</option>
+            <option>ОАЭ</option>
+            <option>Оман</option>
+            <option>Пакистан</option>
+            <option>Панама</option>
+            <option>Папуа — Новая Гвинея</option>
+            <option>Парагвай</option>
+            <option>Перу</option>
+            <option>Польша</option>
+            <option>Португалия</option>
+            <option>Руанда</option>
+            <option>Румыния</option>
+            <option>Сальвадор</option>
+            <option>Сан-Марино</option>
+            <option>Саудовская Аравия</option>
+            <option>Северная Македония</option>
+            <option>Сейшелы</option>
+            <option>Сенегал</option>
+            <option>Сент-Винсент и Гренадины</option>
+            <option>Сербия</option>
+            <option>Сингапур</option>
+            <option>Сирия</option>
+            <option>Словакия</option>
+            <option>Словения</option>
+            <option>США</option>
+            <option>Сомали</option>
+            <option>Судан</option>
+            <option>Суринам</option>
+            <option>Сьерра-Леоне</option>
+            <option>Таджикистан</option>
+            <option>Таиланд</option>
+            <option>Танзания</option>
+            <option>Того</option>
+            <option>Тринидад и Тобаго</option>
+            <option>Тунис</option>
+            <option>Туркменистан</option>
+            <option>Турция</option>
+            <option>Уганда</option>
+            <option>Узбекистан</option>
+            <option>Украина</option>
+            <option>Уругвай</option>
+            <option>Фиджи</option>
+            <option>Филиппины</option>
+            <option>Финляндия</option>
+            <option>Франция</option>
+            <option>Хорватия</option>
+            <option>ЦАР</option>
+            <option>Чад</option>
+            <option>Черногория</option>
+            <option>Чехия</option>
+            <option>Чили</option>
+            <option>Швейцария</option>
+            <option>Швеция</option>
+            <option>Шри-Ланка</option>
+            <option>Эквадор</option>
+            <option>Экваториальная Гвинея</option>
+            <option>Эритрея</option>
+            <option>Эстония</option>
+            <option>Эфиопия</option>
+            <option>ЮАР</option>
+            <option>Ямайка</option>
+            <option>Япония</option>
+        </select>
+    </div>
+</div>
+
+                <button class="btn search-btn">Найти</button>
+            </form>
+
+            <section class="results-section">
+                <h2>Результаты поиска</h2>
+                <table class="results-table">
+                    <thead>
+                        <tr>
+                            <th>ФИО</th>
+                            <th>Дата рождения</th>
+                            <th>Гражданство</th>
+                            <th>Действия</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Иванов Иван Иванович</td>
+                            <td>01.01.1980</td>
+                            <td>РФ</td>
+                            <td><a href="person-view.html" class="btn btn-primary">Просмотр</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

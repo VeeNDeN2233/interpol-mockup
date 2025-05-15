@@ -1,0 +1,551 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #2175b5; /* Более светлый синий */
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.gerb {
+  padding-left: 90px;
+    height: 70px;
+    width: auto;
+}
+
+.logo-text div:first-child,
+.logo-text div:nth-child(2) {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+/* Стили для кнопки */
+.service-button {
+  width: 23%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 20px; /* Увеличили внутренние отступы */
+  cursor: pointer;
+  transition: background 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 140px; /* Увеличили высоту кнопки */
+
+  justify-content: flex-start; /* Выравнивание по верхнему краю */
+
+}
+
+.service-button:hover {
+    background: #f5f5f5;
+}
+
+.button-title {
+  color: #4682B4;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 12px; /* Увеличили отступ */
+  text-align: left; /* Выравнивание по левому краю */
+  padding-left: 10px; /* Отступ от левого края */
+}
+
+.button-subtitle {
+  color: #000;
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: left; /* Выравнивание по левому краю */
+  padding-left: 10px; /* Отступ от левого края */
+  padding-right: 10px; /* Отступ от правого края */
+}
+
+/* Адаптивность для кнопки */
+@media (max-width: 768px) {
+    .service-button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+.portal-name {
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+.admin-button {
+    background: none;
+    border: 2px solid white;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+nav {
+    background-color: #f8fbfe; /* Голубой фон */
+    padding: 10px 0;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-item {
+    padding: 10px 25px;
+    cursor: pointer;
+    border-right: 1px solid #999; /* Серые разделители */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #4a6378; /* Серо-голубой цвет текста */
+    text-align: center;
+    line-height: 1.3;
+
+}
+
+.nav-item:last-child {
+    border-right: none;
+}
+
+.nav-item:hover {
+    background-color: #c5e3fc;
+}
+
+.nav-item img {
+    height: 24px;
+    width: auto;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-item {
+        border-right: none;
+        border-bottom: 1px solid #999;
+        justify-content: center;
+        padding: 15px;
+    }
+
+    .header-left {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .gerb {
+        height: 40px;
+    }
+}
+/* Новые стили для изображений */
+.services-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.services-row img {
+    width: 23%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+@media (max-width: 768px) {
+    .services-row {
+        flex-direction: column;
+    }
+    .services-row img {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+.service-link {
+    width: 200%; /* Такая же ширина, как у .service-button */
+    text-decoration: none;
+    color: inherit;
+    display: block; /* Важно для корректного размещения */
+}
+
+/* Для мобильной версии */
+@media (max-width: 768px) {
+    .service-link {
+        width: 100%;
+    }
+}
+
+/* Стили для градиентного блока */
+
+.gradient-block {
+    background: linear-gradient(to bottom, #fbfaff, #e5edf5);
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding: 40px 20px 0; /* Убрали нижний паддинг */
+    margin-top: -20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 150px; /* Уменьшили минимальную высоту */
+    justify-content: space-between;
+    position: relative; /* Добавили для позиционирования */
+ margin-top: -20px;
+}
+
+.gradient-block h1 {
+    font-size: 20px;
+    text-align: center;
+    color: #1a3d6d;
+    max-width: 1200px;
+    margin: 0 auto 30px;
+    line-height: 1.4;
+    padding-top: 10px; /* Добавляем отступ от полоски */
+  margin-bottom: 20px;
+}
+
+.gradient-block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #cccccc;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.service-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    position: absolute; /* Абсолютное позиционирование */
+    bottom: 0; /* Прижатие к нижнему краю */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0px 0; /* Вертикальный отступ внутри контейнера */
+}
+
+.service-btn {
+    background: none;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    color: #2c4e7b;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 4px;
+}
+
+.service-btn.active,
+.service-btn:hover {
+    background: #fefdfb;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    .gradient-block h1 {
+        font-size: 20px;
+        padding: 0 15px;
+    }
+
+    .service-buttons {
+        flex-direction: column;
+        padding: 0 15px;
+    }
+
+    .service-btn {
+        width: 100%;
+    }
+}
+
+.description-text {
+width: 500px;
+  position: relative;
+   left: 0px;
+
+    padding: 20px 0;
+    color: #2c4e7b;
+    line-height: 1.6;
+}
+
+
+/* Контейнер для двух колонок */
+.content-wrapper {
+    display: flex;
+    gap: 40px;
+    margin: 20px 65px;
+}
+
+.documents-block {
+    flex: 1;
+    max-width: 400px;
+
+    padding: 20px;
+    box-shadow: none !important;
+    padding: 20px 0 !important;
+
+}
+
+.documents-block h3 {
+
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.documents-list {
+    list-style: none;
+}
+
+.documents-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.document-date {
+    color: #666;
+    font-size: 0.9em;
+    white-space: nowrap;
+    margin-left: 15px;
+}
+
+.training-title {
+    margin-top: 25px;
+    padding-top: 25px;
+
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+        margin: 20px;
+    }
+
+    .description-text {
+        width: auto !important;
+        left: 0 !important;
+        padding-right: 0;
+        max-width: 100%;
+    }
+
+    .documents-block {
+        max-width: 100%;
+    }
+}
+
+
+/* Основной контейнер */
+.content-container {
+    display: flex;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 65px;
+}
+
+/* Левая колонка с описанием */
+.left-column {
+    flex: 1;
+    min-width: 60%;
+}
+
+/* Правая колонка с документами */
+.documents-column {
+    flex: 0 0 850px;
+    margin-top: 10px;
+}
+
+.documents-block {
+
+
+    border-radius: 6px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.document-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+
+}
+
+.document-date {
+
+    font-size: 0.9em;
+    white-space: nowrap;
+    margin-left: 15px;
+}
+
+.training-header {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #e3e7ec;
+
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+    .content-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .documents-column {
+        flex: none;
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .left-column h2 {
+        margin-left: 0 !important;
+    }
+}
+
+/* Стили для списка документов */
+.document-list {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.document-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.pdf-icon {
+    width: 35px;
+    height: 35px;
+    vertical-align: middle;
+}
+
+.document-list a {
+    text-decoration: none;
+    color: #2c4e7b;
+    font-size: 14px;
+}
+
+.document-list a:hover {
+    text-decoration: underline;
+}
+
+/* Стили для блока ответственных сотрудников */
+.employee-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px 0;
+}
+
+.employee-name {
+    font-weight: bold;
+    color: #2c4e7b;
+    font-size: 15px;
+}
+
+.employee-position,
+.employee-department {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.4;
+}
+
+.employee-contacts {
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    font-size: 13px;
+    color: #4682B4;
+}
+
+.training-header {
+    margin-bottom: 15px;
+}
+
+/* Аватар сотрудника */
+.employee-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 2px solid #e3e7ec;
+}
+
+/* Адаптивность для аватара */
+@media (max-width: 768px) {
+    .employee-avatar {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+    }
+}
+
+
+
+/* Стили для кнопки вызова сервиса */
+.use-service-btn {
+    display: inline-block;
+    background: #2175b5;
+    color: white !important;
+    padding: 12px 35px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 25px;
+    transition: background 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.use-service-btn:hover {
+    background: #1a5d95;
+    border-color: #164d7a;
+}
+
+/* Адаптивность для кнопки */
+@media (max-width: 768px) {
+    .use-service-btn {
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+    }
+}
