@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>МВД России - информационно-справочный портал</title>
+    <title>Новости и события - МВД России</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
@@ -51,8 +51,14 @@
     </nav>
 
     <main>
-        <h2>Добро пожаловать на информационный портал</h2>
-        <p>Выберите интересующий раздел в меню выше</p>
+        <h2>Новости и события</h2>
+        <div class="news-container">
+            <article class="news-item">
+                <h3>Заголовок новости</h3>
+                <p class="news-date">01.01.2024</p>
+                <p class="news-text">Текст новости...</p>
+            </article>
+        </div>
     </main>
 </body>
-</html>
+</html> 

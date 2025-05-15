@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>МВД России - информационно-справочный портал</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Сервисы ИСОД - МВД России</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
     <header>
       <div class="header-left">
-          <a href="1.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 20px;">
-              <img src="gerb.png" alt="Герб" class="gerb">
+          <a href="{{ url_for('index') }}" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 20px;">
+              <img src="{{ url_for('static', filename='img/gerb.png') }}" alt="Герб" class="gerb">
               <div class="logo-text">
                   <div>МИНИСТЕРСТВО ВНУТРЕННИХ ДЕЛ</div>
                   <div>РОССИЙСКОЙ ФЕДЕРАЦИИ</div>
@@ -18,26 +18,32 @@
               </div>
           </a>
       </div>
-        <button class="admin-button">Администратор <br> Григорий</button>
+        <button class="admin-button">Администратор Г.</button>
     </header>
 
     <nav>
         <ul class="nav-menu">
             <li class="nav-item">
-                <img src="1mn.png" alt="Иконка">
-                <span>Адресно-телефонный<br>справочник</span>
+                <a href="{{ url_for('address_book') }}" style="display: flex; align-items: center; gap: 8px; text-decoration: none; color: inherit;">
+                    <img src="{{ url_for('static', filename='img/1mn.png') }}" alt="Иконка">
+                    <span>Адресно-телефонный<br>справочник</span>
+                </a>
             </li>
             <li class="nav-item">
-                <img src="2mn.png" alt="Иконка">
-                <span>Новости,<br>события</span>
+                <a href="{{ url_for('news') }}" style="display: flex; align-items: center; gap: 8px; text-decoration: none; color: inherit;">
+                    <img src="{{ url_for('static', filename='img/2mn.png') }}" alt="Иконка">
+                    <span>Новости,<br>события</span>
+                </a>
             </li>
             <li class="nav-item">
-                <img src="3mn.png" alt="Иконка">
-                <span>Вопросы<br>и ответы</span>
+                <a href="{{ url_for('faq') }}" style="display: flex; align-items: center; gap: 8px; text-decoration: none; color: inherit;">
+                    <img src="{{ url_for('static', filename='img/3mn.png') }}" alt="Иконка">
+                    <span>Вопросы<br>и ответы</span>
+                </a>
             </li>
             <li class="nav-item">
-                <a href="serviceIsod.html" style="display: flex; align-items: center; gap: 8px; text-decoration: none; color: inherit;">
-                    <img src="4mn.png" alt="Иконка">
+                <a href="{{ url_for('service_isod') }}" style="display: flex; align-items: center; gap: 8px; text-decoration: none; color: inherit;">
+                    <img src="{{ url_for('static', filename='img/4mn.png') }}" alt="Иконка">
                     <span>Сервисы<br>ИСОД</span>
                 </a>
             </li>
@@ -49,43 +55,40 @@
       <br>
       <h3>Сервисы обеспечения повседневной деятельности</h3>
       <div class="services-row">
-
         <div class="service-button">
-        <div class="button-title">СЭП</div>
-        <div class="button-subtitle">Сервис электронной почты</div>
-</div>
-
-        <div class="service-button">
-        <div class="button-title">СЭД</div>
-        <div class="button-subtitle">Сервис электронного<br>документооборота</div>
+          <div class="button-title">СЭП</div>
+          <div class="button-subtitle">Сервис электронной почты</div>
         </div>
 
         <div class="service-button">
-        <div class="button-title">СВКС-м</div>
-        <div class="button-subtitle">Сервис<br>видеоконференцсвязи</div>
-</div>
+          <div class="button-title">СЭД</div>
+          <div class="button-subtitle">Сервис электронного<br>документооборота</div>
+        </div>
 
-            <div class="service-button">
-        <div class="button-title">СУДИС</div>
-        <div class="button-subtitle">Сервис управления доступом к<br>информационным системам и ресурсам</div>
-</div>
+        <div class="service-button">
+          <div class="button-title">СВКС-м</div>
+          <div class="button-subtitle">Сервис<br>видеоконференцсвязи</div>
+        </div>
 
-            <div class="service-button">
-        <div class="button-title">ВИСП</div>
-        <div class="button-subtitle">Ведомственный<br>информационно-справочный портал</div>
-</div>
+        <div class="service-button">
+          <div class="button-title">СУДИС</div>
+          <div class="button-subtitle">Сервис управления доступом к<br>информационным системам и ресурсам</div>
+        </div>
 
-<div class="service-button">
-<div class="button-title">Интернет сайт</div>
-<div class="button-subtitle">Официальный интернет<br>сайт</div>
-</div>
+        <div class="service-button">
+          <div class="button-title">ВИСП</div>
+          <div class="button-subtitle">Ведомственный<br>информационно-справочный портал</div>
+        </div>
 
-
+        <div class="service-button">
+          <div class="button-title">Интернет сайт</div>
+          <div class="button-subtitle">Официальный интернет<br>сайт</div>
+        </div>
       </div>
       <br>
       <h3>Сервисы обеспечения оперативно-служебной деятельности</h3>
       <div class="services-row">
-          <a href="sodi.html" class="service-link">
+          <a href="{{ url_for('sodi_system') }}" class="service-link">
               <div class="service-button">
                   <div class="button-title">СОДИ-М</div>
                   <div class="button-subtitle">Сервис обеспечения оперативно-служебной деятельности<br>НЦБ Интерпола МВД России</div>
@@ -93,7 +96,5 @@
           </a>
       </div>
     </main>
-
-
 </body>
 </html>
